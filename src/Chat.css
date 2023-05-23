@@ -1,0 +1,72 @@
+.chat {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.content {
+  padding: 20px;
+  flex-shrink: 0;
+}
+
+.message {
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.bot {
+  align-self: flex-start;
+  background-color: #e6e6e6;
+  /* Szürke háttér */
+  color: #000000;
+  /* Fekete szöveg */
+}
+
+.user {
+  align-self: flex-end;
+  background-color: #0099ff;
+  /* Kék háttér */
+  color: #ffffff;
+  /* Fehér szöveg */
+}
+
+.waiting {
+  margin: auto;
+  text-align: center;
+  font-size: 1em;
+}
+
+.waiting::before {
+  content: ' ';
+  width: 1em;
+  display: inline-block;
+  text-align: left;
+  animation: dots 1s steps(4, end) infinite;
+}
+
+@keyframes dots {
+  0% {
+    content: '.  ';
+  }
+
+  25% {
+    content: '.. ';
+  }
+
+  50% {
+    content: '...';
+  }
+
+  75% {
+    content: '   ';
+  }
+
+  100% {
+    content: '.  ';
+  }
+}

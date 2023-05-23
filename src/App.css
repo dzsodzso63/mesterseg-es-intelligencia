@@ -1,27 +1,34 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  position: fixed;
+  top: 10px;
+  left: 20px;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  border-bottom: 3px solid #337ab7;
+  height: 3.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 4;
 }
 
 .App-link {
@@ -32,7 +39,72 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-main {
+  display: flex;
+  flex-direction: row;
+}
+
+.App-chat {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  flex: 1 1 300px;
+  min-width: 500px;
+  padding: 30px;
+  height: calc(100vh - 90px);
+}
+
+.App-chat-review {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.App-chat-review div {
+  margin-left: 20px;
+}
+
+.links {
+  flex: 1 1 auto;
+  min-width: 600px;
+  height: calc(100vh - 55px);
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.content textarea {
+  width: 80%;
+  height: 60px;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.content button {
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #0099ff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.content button:hover {
+  background-color: #007acc;
 }
